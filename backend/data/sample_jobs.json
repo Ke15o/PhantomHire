@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Junior Data Analyst",
+    "company": "Northstar Systems",
+    "description": "Join our data team as a Junior Data Analyst in Manchester. You will clean datasets in SQL and Python, build weekly dashboards in Power BI, and support forecasting work with the finance team. Requirements include a degree in Mathematics, Statistics, Economics, or a related subject, strong Excel skills, and the ability to communicate analysis clearly. Salary is £32,000-£36,000 plus pension, annual bonus, private healthcare, and 27 days annual leave. This hybrid role includes structured onboarding, clear reporting responsibilities, and mentoring from senior analysts.",
+    "date_posted": "2026-03-01"
+  },
+  {
+    "title": "Graduate Software Engineer",
+    "company": "Beacon Products",
+    "description": "We are hiring a Graduate Software Engineer in London to work on internal web products. You will build REST APIs with Python and FastAPI, write automated tests, manage PostgreSQL queries, and deploy services with Docker on AWS. Candidates should have a degree in Computer Science or a related field, familiarity with Git, and evidence of software projects. Salary is £38,000-£42,000 plus pension, private healthcare, annual bonus, and 25 days holiday. The role sits in the platform engineering team and includes regular code review, sprint planning, and technical mentoring.",
+    "date_posted": "2026-02-25"
+  },
+  {
+    "title": "Risk & Compliance Analyst",
+    "company": "Harbour Mutual",
+    "description": "Harbour Mutual is recruiting a Risk and Compliance Analyst for its Edinburgh office. Responsibilities include monitoring policy exceptions, preparing monthly risk reports, analysing control data in Excel and SQL, and coordinating remediation actions with department leads. Applicants should have 1-2 years of experience, or a relevant degree in finance, economics, or mathematics, and strong written communication. Salary is £34,000-£39,000 with pension, life assurance, flexible working, and 30 days annual leave. The role is hybrid and includes clear ownership of scheduled reporting and audit preparation.",
+    "date_posted": "2026-02-18"
+  },
+  {
+    "title": "Marketing Operations Executive",
+    "company": "Crestlane Media",
+    "description": "As a Marketing Operations Executive in Bristol, you will manage campaign reporting, maintain Salesforce records, analyse channel performance, and coordinate with product and sales teams. Requirements include experience with Excel, analytics tooling, and CRM systems, plus strong organisation and stakeholder communication. Salary is £30,000-£35,000 plus bonus, pension, and 26 days holiday. Benefits include flexible working and a clear progression plan. You will own weekly reporting packs, campaign QA checks, and department dashboards.",
+    "date_posted": "2026-03-05"
+  },
+  {
+    "title": "Business Support Associate",
+    "company": "TalentFlow Partners",
+    "description": "We are seeking a motivated individual to join our dynamic team in a fast-paced environment. This exciting opportunity is ideal for a self-starter who can wear many hats and demonstrate excellent communication skills. The successful candidate will support various responsibilities across the business and must be flexible, results-driven, and a strong team player. We offer a competitive salary and an exciting opportunity for growth.",
+    "date_posted": "2025-12-01"
+  },
+  {
+    "title": "Operations Assistant",
+    "company": "TalentFlow Partners",
+    "description": "We are seeking a motivated individual to join our dynamic team in a fast-paced environment. This exciting opportunity is ideal for a self-starter who can wear many hats and demonstrate excellent communication skills. The successful candidate will support various responsibilities across the business and must be flexible, results-driven, and a strong team player. We offer a competitive salary and an exciting opportunity for growth.",
+    "date_posted": "2025-12-20"
+  },
+  {
+    "title": "Office Coordinator",
+    "company": "TalentFlow Partners",
+    "description": "We are seeking a motivated individual to join our dynamic team in a fast-paced environment. This exciting opportunity is ideal for a self-starter who can wear many hats, hit the ground running, and demonstrate excellent communication skills. The successful candidate will support various responsibilities across the business and must be flexible, results-driven, and a strong team player. We offer a competitive salary and strong growth mindset culture.",
+    "date_posted": "2026-01-15"
+  },
+  {
+    "title": "General Business Associate",
+    "company": "TalentFlow Partners",
+    "description": "Join our dynamic team in a fast-paced environment. This exciting opportunity suits a motivated individual with a growth mindset who can wear many hats, hit the ground running, and act as a team player. The successful candidate will take on various responsibilities, show excellent communication skills, and remain flexible in a results-driven culture. Competitive salary and an exciting opportunity for development are offered.",
+    "date_posted": "2026-01-28"
+  }
+]
