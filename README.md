@@ -1,57 +1,178 @@
-# PhantomHire
-
-PhantomHire is a hackathon project designed to detect **ghost job listings**.
-
-A *ghost job* is a job posting that appears active but is not genuinely being filled. These listings can remain online for months, be reposted repeatedly, or contain vague descriptions that suggest the role may not actually exist.
-
-PhantomHire analyses job descriptions and produces a **Ghost Score** indicating the likelihood that the listing is a ghost job.
+Below is a **clean, judge-friendly README** for the finished project. It removes internal hackathon planning language, explains the project clearly, and gives **simple steps to run the full stack**.
 
 ---
 
-# Features
+# PhantomHire
 
-The backend analyses listings using a deterministic scoring system based on:
+PhantomHire helps job seekers identify **ghost job listings**.
 
-* Posting age
-* Vague wording detection
-* Concrete role specificity
-* Duplicate job description similarity
-* Salary presence signals
+A *ghost job* is a job posting that appears active but is not genuinely being filled. These listings often stay online for long periods, are reposted repeatedly, or contain vague descriptions that suggest the role may not actually exist.
 
-The system returns:
+PhantomHire analyses a job listing and produces a **Ghost Score** that estimates how likely the listing is to be a ghost job.
 
-* **Ghost Score (0–100)**
-* **Verdict** (Likely Active / Unclear / Likely Ghost)
-* **Confidence estimate**
-* **Explanation reasons**
-* **Key feature signals**
+The system also explains **why** the listing was flagged so users can understand the result.
+
+---
+
+# What PhantomHire Does
+
+Users paste a job listing description into the interface.
+
+PhantomHire then analyses the listing and returns:
+
+* **Ghost Score (0–100)** – estimated likelihood the job is a ghost listing
+* **Verdict** – Likely Active, Unclear, or Likely Ghost
+* **Confidence score**
+* **Explanation reasons** describing the signals that influenced the result
+* **Feature signals** used during analysis
+
+The goal is to give job seekers **quick transparency** before they invest time applying.
+
+---
+
+# How It Works
+
+PhantomHire evaluates job listings using several signals:
+
+* **Posting age** – older listings are more suspicious
+* **Vague wording detection** – phrases common in generic or low-detail postings
+* **Role specificity** – concrete skills, tools, and responsibilities reduce suspicion
+* **Duplicate detection** – similarity to previously analysed listings
+* **Salary signals** – presence of compensation details
+
+The system combines these signals into a **deterministic scoring engine** that produces the Ghost Score.
+
+Duplicate detection uses **TF-IDF text vectorisation and cosine similarity** to detect reposted job descriptions.
 
 ---
 
 # Project Structure
 
 ```
-PhantomHire/
+PhantomHire
 │
-├── backend/          FastAPI analysis engine
+├── backend
+│   ├── main.py
+│   ├── analyser.py
+│   ├── features.py
+│   ├── similarity.py
+│   ├── scoring.py
+│   ├── database.py
+│   ├── schemas.py
+│   ├── config.py
+│   └── data/
 │
-├── frontend/         Frontend client (built separately)
+├── frontend
+│   ├── index.html
+│   ├── main.tsx
+│   ├── App.tsx
+│   ├── components/
+│   └── services/
 │
-├── .gitignore
-└── README.md
+├── README.md
+└── .gitignore
 ```
 
 ---
 
-# API Contract
+# Requirements
 
-### Endpoint
+Install the following before running the project:
+
+**Backend**
+
+* Python 3.9+
+* pip
+
+**Frontend**
+
+* Node.js 18+
+* npm
+
+---
+
+# Running the Project
+
+The backend and frontend run as two local servers.
+
+## 1. Start the Backend
+
+Navigate to the backend folder:
+
+```
+cd backend
+```
+
+Install dependencies:
+
+```
+pip install -r requirements.txt
+```
+
+Run the API server:
+
+```
+uvicorn main:app --reload
+```
+
+The backend will start at:
+
+```
+http://127.0.0.1:8000
+```
+
+Test it with:
+
+```
+http://127.0.0.1:8000/health
+```
+
+---
+
+## 2. Start the Frontend
+
+Open a second terminal and navigate to the frontend folder:
+
+```
+cd frontend
+```
+
+Install dependencies:
+
+```
+npm install
+```
+
+Start the development server:
+
+```
+npm run dev
+```
+
+The interface will run at:
+
+```
+http://localhost:3000
+```
+
+---
+
+# Using PhantomHire
+
+1. Open the frontend in your browser.
+2. Paste a job listing description into the form.
+3. Submit the listing.
+4. PhantomHire returns a **Ghost Score and explanation**.
+
+---
+
+# API Example
+
+### Request
 
 ```
 POST /analyse
 ```
-
-### Request
 
 ```json
 {
@@ -86,54 +207,48 @@ POST /analyse
 
 ---
 
-# Running the Backend
+# Technology Used
 
-See:
-
-```
-backend/README.md
-```
-
----
-
-# Tech Stack
-
-Backend:
+### Backend
 
 * Python
 * FastAPI
 * scikit-learn
-* numpy
-* pandas
+* NumPy
+* Pandas
 * SQLite
 
-Similarity detection uses:
+### Frontend
 
-* **TF-IDF vectorisation**
-* **cosine similarity**
+* React
+* TypeScript
+* Vite
 
----
+### Methods
 
-# Hackathon Goals
-
-The system is designed for:
-
-* deterministic outputs
-* fast local setup
-* reliable demo behaviour
-* explainable scoring
-
-It intentionally avoids heavy ML pipelines or external services.
+* TF-IDF text vectorisation
+* Cosine similarity
+* Rule-based scoring engine
 
 ---
 
-# Status
+# Limitations
 
-MVP backend implemented.
+PhantomHire analyses the **text of job listings**, not the internal hiring status of companies.
 
-Next steps:
+The Ghost Score is an **estimate based on patterns**, not a definitive judgement.
 
-* frontend integration
-* UI visualisation of ghost scores
-* improved similarity dataset
-* tuning scoring heuristics
+---
+
+# Future Improvements
+
+Possible extensions include:
+
+* automatic job page extraction
+* larger dataset of historical listings
+* improved scoring calibration
+* browser extension for analysing listings directly on job sites
+
+---
+
+If you'd like, I can also give you a **much stronger README header section (with badges, screenshots, and a judge-friendly hook)** that tends to make hackathon projects look **far more polished on GitHub**.
